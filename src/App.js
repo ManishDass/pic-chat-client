@@ -43,17 +43,19 @@ function App() {
       block: "center",
       inline: "start",
     })
+    window.scrollTo(0,1)
   })
 
   function getEmoji(e) {
-    console.log(e)
-    let x = String(e.emoji);
-    textInput.current.value += x;
+    let emojis = String(e.emoji);
+    textInput.current.value += emojis;
+    setMessage(textInput.current.value)
   }
 
   function emojiHandler() {
     setEmojiSection(!emojiSection)
   }
+  
 
 
   return (
