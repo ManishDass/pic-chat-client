@@ -8,10 +8,13 @@ import video from './assets/video.svg';
 import voice from './assets/phone.svg';
 import option from './assets/menu.svg';
 import back from './assets/arrow-left.svg';
+import EmojiPicker from 'emoji-picker-react';
+
 
 function App() {
   const { messages, sendMessage } = useChat('test');  //Custom useChat Hook
   const [message, setMessage] = useState('')
+  const [emojiSection, setEmojiSection] = useState(false)
 
   const textInput = useRef(null);
   const messageReceived = useRef(null)
@@ -42,6 +45,16 @@ function App() {
     })
   })
 
+  function getEmoji(e) {
+    console.log(e)
+    let x = String(e.emoji);
+    textInput.current.value += x;
+  }
+
+  function emojiHandler() {
+    setEmojiSection(!emojiSection)
+  }
+
 
   return (
     <div className='main' >
@@ -68,12 +81,21 @@ function App() {
 
         <div className='inputWrapper'>
           <div className='textInputOuterWrapper'>
-            <img alt='emoji-icon' className='emojiButton' src={smile} />
+            <img alt='emoji-icon' className='emojiButton' src={smile} onClick={emojiHandler} />
             <input className='textInput' onKeyDown={handleKeyDown} type='text' ref={textInput} onChange={changeHandler} placeholder='Type a message' autoComplete='none' />
             <img alt='clip-icon' src={clip} />
           </div>
           <button className='submitButton' onClick={submitMessageHandler}> <img alt='send-button' className='sendButton' src={send} /> </button>
         </div>
+
+          {
+            (emojiSection === true) ? <EmojiPicker onEmojiClick={getEmoji} emojiStyle={'google'} Theme azyLoadEmojis='true' 
+            searchDisabled='false' className='emojiPicker' height='100vh' width='100vw' previewConfig={{
+              showPreview: false, // defaults to: true
+            }} /> : ''
+          }
+
+        
       </div>
 
     </div>
