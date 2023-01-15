@@ -4,9 +4,12 @@ import send from './assets/send.svg'
 import clip from './assets/paperclip.svg'
 import smile from './assets/smile.svg'
 import useChat from './service/useChat';
+import video from './assets/video.svg';
+import voice from './assets/phone.svg';
+import option from './assets/menu.svg';
+import back from './assets/arrow-left.svg';
 
 function App() {
-
   const { messages, sendMessage } = useChat('test');  //Custom useChat Hook
   const [message, setMessage] = useState('')
 
@@ -42,6 +45,15 @@ function App() {
 
   return (
     <div className='main' >
+      <header className='topBar'>
+        <img alt='back-arrow' className='back-icon' src={back} />
+        <img alt='avatar' className='avatar' src='//unsplash.it/100/100'/>
+        <p className='roomName' >Public Room</p>
+        <img alt='video-icon' className='video-icon' src={video} />
+        <img alt='voice-icon' className='voice-icon' src={voice} />
+        <img alt='option-icon' className='option-icon' src={option} />
+      </header>
+
       <aside className='sidebar'></aside>
 
       <div className='chatInputWrapper'>

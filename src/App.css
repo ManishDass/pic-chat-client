@@ -43,7 +43,7 @@
   align-items: center;
 }
 
-.sendButton {
+.sendButton, .back-icon, .video-icon, .voice-icon, .option-icon {
   /* to get desired color https://codepen.io/sosuke/pen/Pjoqqp */
   filter: invert(100%) sepia(44%) saturate(75%) hue-rotate(14deg) brightness(117%) contrast(84%);
 }
@@ -63,13 +63,52 @@
     display: none;
   }
 
+  .topBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7%;
+    background-color: #3AA589;
+    color: white;
+    font-weight: 600;
+  }
+
+  .topBar .avatar {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    margin-left: -1.2rem;
+  }
+
+  .topBar .roomName {
+   margin-right: 1rem;
+   margin-left: -1rem;
+   font-size: 0.8rem;
+  }
+
+  .video-icon, .option-icon {
+    height: 22px;
+  }
+
+  .voice-icon {
+    height: 20px;
+  }
+
   .chatInputWrapper {
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 93%;
+  }
+
+  .own-message {
+    padding: 10px 15px;
+  }
+  
+  .others-message {
+    padding: 10px 15px;
   }
 
   .chatWrapper {
@@ -134,8 +173,6 @@
     justify-content: center;
     align-items: center;
   }
-
-
 }
 
 @media screen and (min-width: 769px) {
@@ -147,6 +184,10 @@
     height: 100vh;
     width: 100vw;
     min-height: 0;
+  }
+
+  .topBar {
+    display: none;
   }
 
   .sidebar {
