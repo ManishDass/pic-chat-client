@@ -1,0 +1,214 @@
+.own-message {
+  background-color: #4E416D;
+  color: white;
+  padding: 20px 25px;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  align-self: flex-end;
+  margin-right: 2rem;
+  margin-top: 20px;
+  max-width: 70%;
+  text-align: left;
+  line-height: 25px;
+}
+
+.others-message {
+  background-color: #F4F7FB;
+  color: black;
+  padding: 20px 25px;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  align-self: flex-end;
+  margin-left: 2rem;
+  margin-top: 20px;
+  max-width: 70%;
+  text-align: left;
+  line-height: 25px;
+  align-self: flex-start;
+}
+
+.submitButton {
+  border-radius: 50px;
+  height: 4.3rem;
+  width: 4.3rem;
+  border: none;
+  background-color: #3AA589;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendButton {
+  /* to get desired color https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(100%) sepia(44%) saturate(75%) hue-rotate(14deg) brightness(117%) contrast(84%);
+}
+
+.emojiButton {
+  height: 1.9rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .chatInputWrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .chatWrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 89%;
+    width: 100%;
+    overflow: scroll;
+    margin-bottom: 3rem;
+  }
+
+  .inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10px;
+    margin-top: 0px;
+  }
+
+  .textInputOuterWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: 40px;
+    width: 80%;
+    background-color: #F4F7FB;
+    margin-bottom: 2rem;
+  }
+
+  .textInput {
+    border: none;
+    outline: none;
+    background-color: #F4F7FB;
+    text-align: left;
+    font-size: 1rem;
+    width: 60%;
+    height: 80%;
+    margin: 0 20px;
+  }
+
+  .submitButton {
+    margin-left: 0.4rem;
+  }
+
+  .submitButton {
+    border-radius: 50px;
+    height: 3.15rem;
+    width: 3.15rem;
+    border: none;
+    background-color: #3AA589;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    min-height: 0;
+  }
+
+  .sidebar {
+    width: 30vw;
+    background-color: #FFFFFF;
+    height: 90vh;
+    border-radius: 30px;
+    margin-right: -10%;
+  }
+
+  .chatInputWrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    border-radius: 30px;
+  }
+
+  .textInputOuterWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    border-radius: 50px;
+    width: 60%;
+    background-color: #F4F7FB;
+    margin-bottom: 2rem;
+  }
+
+
+  .chatWrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 90%;
+    width: 55vw;
+    border-radius: 30px;
+    overflow: scroll;
+  }
+
+  .inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 129%;
+    height: 15%;
+    margin-top: 35px;
+  }
+
+  .textInput {
+    border: none;
+    outline: none;
+    background-color: #F4F7FB;
+    text-align: left;
+    font-size: 1rem;
+    width: 75%;
+    height: 80%;
+    margin: 0 20px;
+  }
+
+}
