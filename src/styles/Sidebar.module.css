@@ -1,0 +1,60 @@
+.avatar {
+    height: 60px;
+    border-radius: 50%;
+    grid-area: a;
+}
+
+.userWrapper {
+    display: grid;
+    grid-template:
+        "a b . . . . . . d"
+        "a c . . . . . . .";
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.userName {
+    grid-area: b;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.userMsg {
+    grid-area: c;
+    font-size: 0.8rem;
+    margin-top: -10px;
+}
+
+.msgTime {
+    grid-area: d;
+    font-size: 0.8rem;
+}
+
+.line {
+    width: 60%;
+    margin: auto;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    height: 1px;
+    color: #c5afaf;
+    background-color: #dcc5c5;
+    border: none;
+
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .sidebar {
+        width: 30vw;
+        background-color: #FFFFFF;
+        height: 85vh;
+        border-radius: 30px;
+        padding-top: 1rem;
+    }
+}

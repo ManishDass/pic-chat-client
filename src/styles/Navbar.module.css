@@ -1,0 +1,69 @@
+:root {
+    --accent: #3AA589;
+}
+.navbarWrapper 
+{
+    height: 10vh;
+    width: 100vw;
+    /* background-color: red; */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    display: grid;
+    grid-template: 
+    ". a a a . . . . . . . . . b b b b b b b b b . . c . . .";
+    align-items: center;
+}
+
+.logoSection {
+    grid-area: a;
+}
+
+.navbarSection {
+    grid-area: b;
+    display: flex;
+    justify-content: space-around;
+}
+
+.controlSection {
+    grid-area: c;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo
+{
+    height: 40px;
+}
+
+.logotext {
+    margin-left: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.logoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-bottom: -5px;
+}
+
+@media screen and (max-width: 767px) {
+    .navbarWrapper 
+    {
+    display: none;
+    }
+}
