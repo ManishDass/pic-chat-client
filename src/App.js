@@ -12,9 +12,10 @@ import EmojiPicker from 'emoji-picker-react';
 
 
 function App() {
-  const { messages, sendMessage } = useChat('test');  //Custom useChat Hook
+  const { messages, sendMessage, sendFile } = useChat('test');  //Custom useChat Hook
   const [message, setMessage] = useState('')
   const [emojiSection, setEmojiSection] = useState(false)
+  const [file, setFile] = useState(null)
 
   const textInput = useRef(null);
   const messageReceived = useRef(null)
@@ -56,6 +57,12 @@ function App() {
     setEmojiSection(!emojiSection)
   }
   
+  const fileUploadHandler = (e) => {
+    console.log("Choose Image")
+    console.log("File: ",e.target.files[0])
+    sendFile(e.target.files[0])
+  }
+  
 
 
   return (
@@ -85,7 +92,13 @@ function App() {
           <div className='textInputOuterWrapper'>
             <img alt='emoji-icon' className='emojiButton' src={smile} onClick={emojiHandler} />
             <input className='textInput' onKeyDown={handleKeyDown} type='text' ref={textInput} onChange={changeHandler} placeholder='Type a message' autoComplete='none' />
-            <img alt='clip-icon' src={clip} />
+            {/* <input type='file' onChange={fileUploadHandler} /> */}
+            <div className="image-upload">
+              <label htmlFor="file-input">
+                <img alt='clip-icon' src={clip} />
+              </label>
+              <input id="file-input" type="file" onChange={fileUploadHandler}/>
+            </div>
           </div>
           <button className='submitButton' onClick={submitMessageHandler}> <img alt='send-button' className='sendButton' src={send} /> </button>
         </div>
@@ -97,7 +110,7 @@ function App() {
             }} /> : ''
           }
 
-        
+        {/* <img alt='clip-icon' onClick={fileUploadHandler} src={clip} /> */}
       </div>
 
     </div>

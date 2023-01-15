@@ -52,6 +52,10 @@
   height: 1.9rem;
 }
 
+.image-upload>input {
+  display: none;
+}
+
 
 @media screen and (max-width: 768px) {
   .main {
