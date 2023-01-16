@@ -2,7 +2,37 @@
     height: 60px;
     border-radius: 50%;
     grid-area: a;
+    /* #3CC7B7 */
 }
+
+.avatar img {
+    height: 60px;
+    border-radius: 50%;
+    grid-area: a;
+}
+
+.online:before {
+    position: absolute;
+    content: '';
+    background-color: #3CC7B7;
+    border-radius:50%;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    margin-top: 43px;
+    margin-left: 42px;
+    border: 2px solid white;
+}
+
+/* .onlineDot {
+    background-color: #3CC7B7;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: 90%;
+    left: -1800%;
+} */
 
 .userWrapper {
     display: grid;

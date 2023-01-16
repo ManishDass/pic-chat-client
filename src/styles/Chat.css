@@ -1,0 +1,283 @@
+.own-message {
+  background: #4E416D;
+  background: -webkit-linear-gradient(right, #4E416D, #645092);
+  background: -moz-linear-gradient(right, #4E416D, #645092);
+  background: linear-gradient(to left, #4E416D, #645092);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  align-self: flex-end;
+  margin-right: 2rem;
+  margin-top: 20px;
+  max-width: 70%;
+  text-align: left;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.others-message {
+  background-color: #F4F7FB;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  align-self: flex-end;
+  margin-left: 2rem;
+  margin-top: 20px;
+  max-width: 70%;
+  text-align: left;
+  line-height: 25px;
+  align-self: flex-start;
+  font-weight: 600;
+}
+
+.submitButton {
+  border-radius: 50px;
+  height: 3.3rem;
+  width: 3.3rem;
+  border: none;
+  background-color: #3AA589;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendButton, .back-icon, .video-icon, .voice-icon, .option-icon {
+  /* to get desired color https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(100%) sepia(44%) saturate(75%) hue-rotate(14deg) brightness(117%) contrast(84%);
+}
+
+.emojiButton {
+  height: 1.9rem;
+}
+
+.image-upload>input {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    height: 92.6vh;
+    width: 100vw;
+  }
+
+  .topBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7%;
+    background-color: #3AA589;
+    color: white;
+    font-weight: 600;
+  }
+
+  .topBar .avatar {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    margin-left: -1.2rem;
+  }
+
+  .successMsg {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-45%, 40%);
+    text-align: center;
+    background-color: #3AA589;
+    color: white;
+    border-radius: 30px;
+    padding: 20px 20px;
+    font-weight: 800;
+  }
+
+  .topBar .roomName {
+   margin-right: 1rem;
+   margin-left: -1rem;
+   font-size: 0.8rem;
+  }
+
+  .video-icon, .option-icon {
+    height: 22px;
+  }
+
+  .voice-icon {
+    height: 20px;
+  }
+
+  .chatInputWrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 93%;
+  }
+
+  .own-message {
+    padding: 10px 15px;
+    margin-right: 1rem;
+  }
+  
+  .others-message {
+    padding: 10px 15px;
+    margin-left: 1rem;
+  }
+
+  .chatWrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 89%;
+    width: 100%;
+    overflow: scroll;
+    margin-bottom: 3rem;
+  }
+
+  .inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .textInputOuterWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: 40px;
+    width: 80%;
+    background-color: #F4F7FB;
+    margin-bottom: 2rem;
+  }
+
+  .textInput {
+    border: none;
+    outline: none;
+    background-color: #F4F7FB;
+    text-align: left;
+    font-size: 1rem;
+    width: 60%;
+    height: 80%;
+    margin: 0 20px;
+  }
+
+  .submitButton {
+    margin-left: 0.4rem;
+  }
+
+  .submitButton {
+    border-radius: 50px;
+    height: 3.15rem;
+    width: 3.15rem;
+    border: none;
+    background-color: #3AA589;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    margin-top: -0.5rem;
+    min-height: 0;
+  }
+
+  .topBar {
+    display: none;
+  }
+
+  .chatInputWrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    border-radius: 30px;
+  }
+
+  .textInputOuterWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.3rem;
+    border-radius: 50px;
+    width: 60%;
+    background-color: #F4F7FB;
+    margin-bottom: 2rem;
+  }
+
+
+  .chatWrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 90%;
+    width: 55vw;
+    border-radius: 30px;
+    overflow: scroll;
+  }
+
+  .inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130%;
+    height: 12%;
+    margin-top: 35px;
+  }
+
+  .textInput {
+    border: none;
+    outline: none;
+    background-color: #F4F7FB;
+    text-align: left;
+    font-size: 1rem;
+    width: 75%;
+    height: 80%;
+    margin: 0 20px;
+  }
+
+  .successMsg {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(35%, 150%);
+    text-align: center;
+    background-color: #3AA589;
+    color: white;
+    border-radius: 30px;
+    padding: 20px 20px;
+    font-weight: 800;
+  }
+
+}

@@ -4,8 +4,11 @@ import logo from '../assets/logo192.png'
 import { NavLink } from 'react-router-dom'
 import searchIcon from '../assets/search.svg'
 import bellIcon from '../assets/bell.svg'
+// import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+  // const navigate = useNavigate()
+
   return (
     <div className={style.navbarWrapper} >
 
@@ -16,9 +19,7 @@ const Navbar = () => {
 
         <div className={style.navbarSection}>
             <NavLink to='/'>HOME</NavLink>
-            <NavLink to='/' className={({ isActive }) =>
-              isActive ? style.active : undefined
-            }>CHAT</NavLink>
+            <NavLink to='#' >CHAT</NavLink>
             <NavLink to='/'>CONTACTS</NavLink>
             <NavLink to='/'>SETTINGS</NavLink>
             <NavLink to='/'>FAQS</NavLink>
