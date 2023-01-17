@@ -18,9 +18,11 @@ const useChat = (roomId) => {
     
     // Listens for incoming messages
     socketRef.current.on(NEW_CHAT_MESSAGE_EVENT, (message) => {
+      // console.log("ID: ",message.senderId)
       const incomingMessage = {
         ...message,
         ownedByCurrentUser: message.senderId === socketRef.current.id, //True or false
+        senderId: message.senderId
       };
       setMessages((messages) => [...messages, incomingMessage]); 
     });
@@ -35,7 +37,7 @@ const useChat = (roomId) => {
   // Sends a message to the server that
   // forwards it to all users in the same room
   const sendMessage = (messageBody) => {
-    console.log("SocketRef: ",socketRef)
+    // console.log("SocketRef: ",socketRef)
     socketRef.current.emit(NEW_CHAT_MESSAGE_EVENT, {
       body: messageBody,
       senderId: socketRef.current.id,

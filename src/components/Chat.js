@@ -102,8 +102,13 @@ const Chat = () => {
               <div className='chatWrapper' >
                 {
                   messages.map((item, index) => (
+                    <>
+                    <p className={`${item.senderId.slice('19').toLowerCase()} ${item.ownedByCurrentUser === true ? 'userIdOwn' : 'userIdOther'
+                      }`} key={Math.random().toFixed(2)*100}> {item.senderId.slice('15')}</p>
+                    
                     <p className={`chats ${item.ownedByCurrentUser === true ? 'own-message' : 'others-message'
                       }`} key={index} ref={messageReceived} >{item.body}</p>
+                    </>
                   ))
                 }
               </div>

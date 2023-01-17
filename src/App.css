@@ -22,14 +22,22 @@
   padding: 10px 20px;
   border-radius: 20px;
   border-top-left-radius: 0;
-  align-self: flex-end;
-  margin-left: 2rem;
+  margin-left: 4.2rem;
   margin-top: 20px;
   max-width: 70%;
   text-align: left;
   line-height: 25px;
   align-self: flex-start;
   font-weight: 600;
+}
+
+.userIdOwn {
+  display: none;
+}
+
+.userIdOther {
+  font-size: 0.5rem;
+  align-self: flex-start;
 }
 
 .submitButton {
@@ -61,6 +69,24 @@
   display: none;
 }
 
+.userIdOther {
+  max-width: 70%;
+  text-align: left;
+  line-height: 25px;
+  align-self: flex-start;
+  font-weight: 600;
+  position: relative;
+  top: 11%;
+  left: 3.5%;
+  height: 35px;
+  width: 35px;
+  background-color: #29B6F6;
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
+  font-size: 0.5rem;
+  text-align: center;
+}
 
 @media screen and (max-width: 768px) {
   .main {
@@ -128,8 +154,78 @@
   
   .others-message {
     padding: 10px 15px;
-    margin-left: 1rem;
+    margin-left: 3.5rem;
   }
+
+  .userIdOther {
+    max-width: 70%;
+    text-align: left;
+    line-height: 25px;
+    align-self: flex-start;
+    font-weight: 600;
+    position: relative;
+    top: 7.85%;
+    left: 3.5%;
+    height: 35px;
+    width: 35px;
+    background-color: #29B6F6;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    font-size: 0.5rem;
+    text-align: center;
+  }
+
+
+.a, .n {
+  background-color: rgb(45, 149, 128);
+}
+
+.b, .o {
+  background-color: rgb(158, 125, 65);
+}
+
+.c, .p {
+  background-color: rgb(44, 77, 110);
+}
+
+.d, .q {
+  background-color: rgb(154, 93, 192);
+}
+
+.e, .r {
+  background-color: rgb(26, 124, 91);
+}
+
+.f, .s {
+  background-color: rgb(152, 55, 55);
+}
+.g, .t {
+  background-color: rgb(145, 142, 81);
+}
+
+.h, .u {
+  background-color: rgb(52, 127, 37);
+}
+
+.i, .v {
+  background-color: rgb(124, 25, 106);
+}
+.j, .w {
+  background-color: rgb(65, 57, 170);
+}
+
+.k, .x {
+  background-color: rgb(92, 10, 10);
+}
+
+.l, .y {
+  background-color: rgb(125, 59, 66);
+}
+
+.m, .z {
+  background-color: rgb(7, 75, 79);
+}
 
   .chatWrapper {
     flex-direction: column;
@@ -279,5 +375,56 @@
     padding: 20px 20px;
     font-weight: 800;
   }
+
+
+.a, .n {
+  background-color: rgb(45, 149, 128);
+}
+
+.b, .o {
+  background-color: rgb(158, 125, 65);
+}
+
+.c, .p {
+  background-color: rgb(44, 77, 110);
+}
+
+.d, .q {
+  background-color: rgb(154, 93, 192);
+}
+
+.e, .r {
+  background-color: rgb(26, 124, 91);
+}
+
+.f, .s {
+  background-color: rgb(152, 55, 55);
+}
+.g, .t {
+  background-color: rgb(145, 142, 81);
+}
+
+.h, .u {
+  background-color: rgb(52, 127, 37);
+}
+
+.i, .v {
+  background-color: rgb(124, 25, 106);
+}
+.j, .w {
+  background-color: rgb(65, 57, 170);
+}
+
+.k, .x {
+  background-color: rgb(92, 10, 10);
+}
+
+.l, .y {
+  background-color: rgb(125, 59, 66);
+}
+
+.m, .z {
+  background-color: rgb(7, 75, 79);
+}
 
 }
