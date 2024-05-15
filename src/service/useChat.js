@@ -4,7 +4,8 @@ import socketIOClient from "socket.io-client";
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage"; // Name of the event
 // const SOCKET_SERVER_URL = "http://192.168.40.122:3000/"; //for LAN
 // const SOCKET_SERVER_URL = "http://localhost:3000/"; //For same device
-const SOCKET_SERVER_URL = "https://pic-chat-server-production.up.railway.app/"; //for server
+//const SOCKET_SERVER_URL = "https://pic-chat-server-production.up.railway.app/"; //for server 
+const SOCKET_SERVER_URL = "http://localhost:3000/"; //for server
 
 const useChat = (roomId) => {
   const [messages, setMessages] = useState([]); // Sent and received messages

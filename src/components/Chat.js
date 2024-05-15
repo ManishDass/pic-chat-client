@@ -103,8 +103,8 @@ const Chat = () => {
                 {
                   messages.map((item, index) => (
                     <>
-                    <p className={`${item.senderId.slice('19').toLowerCase()} ${item.ownedByCurrentUser === true ? 'userIdOwn' : 'userIdOther'
-                      }`} key={Math.random().toFixed(2)*100}> {item.senderId.slice('15')}</p>
+                    <p className={`${item.senderId.slice(19).toLowerCase()} ${item.ownedByCurrentUser === true ? 'userIdOwn' : 'userIdOther'
+                      }`} key={Math.random().toFixed(2)*100}> {item.senderId.slice(15)}</p>
                     
                     <p className={`chats ${item.ownedByCurrentUser === true ? 'own-message' : 'others-message'
                       }`} key={index} ref={messageReceived} >{item.body}</p>
@@ -129,8 +129,8 @@ const Chat = () => {
               </div>
 
               {
-                (emojiSection === true) ? <EmojiPicker onEmojiClick={getEmoji} emojiStyle={'google'} Theme azyLoadEmojis='true'
-                  searchDisabled='false' className='emojiPicker' height='100vh' width='100vw' previewConfig={{
+                (emojiSection === true) ? <EmojiPicker onEmojiClick={getEmoji} emojiStyle={'google'} ThemelazyLoadEmojis='true'
+                  searchDisabled='false' className='emojiPicker' height='100vh' width='100%' previewConfig={{
                     showPreview: false, // defaults to: true
                   }} /> : ''
               }
